@@ -1,0 +1,47 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<available-cpcode-list>
+   <reporting-cpcode-list>
+      <cpcode-list>
+         <cpcode>1234</cpcode>
+         <cpcode-name>CPCODE-NAME</cpcode-name>
+         <network-service-list>
+            <USS_LIVE_SERVICE_TYPES>HD_Live::Universal_Streaming</USS_LIVE_SERVICE_TYPES>
+            <USS_LIVE_SERVICE_TYPES>HD_Live::Flash</USS_LIVE_SERVICE_TYPES>
+            <USS_LIVE_SERVICE_TYPES>Live_Str::HD_Flash</USS_LIVE_SERVICE_TYPES>
+            <IPHONE_LIVE_SERVICE_TYPES>HD_Live::iDevices</IPHONE_LIVE_SERVICE_TYPES>
+            <NS_SERVICE_TYPES>NetStorage::NetStorage</NS_SERVICE_TYPES>
+            <NS_SERVICE_TYPES>ACS_HTTP</NS_SERVICE_TYPES>
+            <NS_SERVICE_TYPES>ACS_FTP</NS_SERVICE_TYPES>
+            <network-service>
+               <service>NetStorage (Legacy)</service>
+            </network-service>
+            <network-service>
+               <service>Universal Streaming Live (Adobe Flash)</service>
+            </network-service>
+         </network-service-list>
+         <top-level-group-list>
+            <top-level-group>1-ABCDEF</top-level-group>
+         </top-level-group-list>
+      </cpcode-list>
+      <cpcode-list>
+         <cpcode>12345</cpcode>
+         <cpcode-name>CPCODE-NAME 2</cpcode-name>
+         <network-service-list>
+            <USS_LIVE_SERVICE_TYPES>HD_Live::Universal_Streaming</USS_LIVE_SERVICE_TYPES>
+            <USS_LIVE_SERVICE_TYPES>HD_Live::Flash</USS_LIVE_SERVICE_TYPES>
+            <USS_LIVE_SERVICE_TYPES>Live_Str::HD_Flash</USS_LIVE_SERVICE_TYPES>
+            <IPHONE_LIVE_SERVICE_TYPES>HD_Live::iDevices</IPHONE_LIVE_SERVICE_TYPES>
+            <NS_SERVICE_TYPES>NetStorage::NetStorage</NS_SERVICE_TYPES>
+            <NS_SERVICE_TYPES>ACS_HTTP</NS_SERVICE_TYPES>
+            <NS_SERVICE_TYPES>ACS_FTP</NS_SERVICE_TYPES>
+            <network-service>
+               <service>HD iPhone Live</service>
+            </network-service>
+         </network-service-list>
+         <top-level-group-list>
+            <top-level-group>1-ABCDEF</top-level-group>
+         </top-level-group-list>
+      </cpcode-list>
+   </reporting-cpcode-list>
+   <netstorage-cpcode-list />
+</available-cpcode-list>

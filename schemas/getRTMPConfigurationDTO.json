@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/getRTMPConfigurationDTO.json#",
+  "type": "object",
+  "properties": {
+    "swfLocation": {
+      "type": "string",
+      "description": "NetStorage location of the validated player used for player verification."
+    },
+    "isSecure": {
+      "type": "boolean",
+      "description": "Specify whether to enable the security profiles for your stream."
+    },
+    "createdDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time when the RTMP configuration was created."
+    },
+    "isHDConfig": {
+      "type": "boolean",
+      "description": "Specify whether your configuration is associated with the stream packaging type."
+    },
+    "name": {
+      "type": "string",
+      "description": "The unique name that you give to your configuration."
+    },
+    "cpcode": {
+      "type": "integer",
+      "description": "The Content Provider code name associated with your RTMP configuration."
+    },
+    "usePreSpreadSerial": {
+      "type": "boolean",
+      "description": "Specify whether to use the standard protocol port for streaming."
+    },
+    "hostAliases": {
+      "type": "array",
+      "description": "Alias provided to the default hostname. To stream content on these hostnames, you must create them on your DNS server as CNAME records pointing to the default hostname.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authProfiles": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/RTMPAuthInfo.json#"
+    },
+    "swfPath": {
+      "type": "string",
+      "description": "Netstorage path of the validated player used for player verification."
+    },
+    "isRtmpe": {
+      "type": "boolean",
+      "description": "Specify whether to enable use of RTMPE/RTMPTE protocols. This denies all other protocols (RTMP/RTMPT)."
+    },
+    "isMbr": {
+      "type": "boolean",
+      "description": "Specify whether to enable Dynamic/MBR (multiple bitrate) feature for your stream."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/Encoder.json#",
+  "type": "object",
+  "description": "Specifies the type of encoder: Name Server or manual configuration. For manual configurations, specify the IP address of the primary and backup encoders used for the stream.",
+  "properties": {
+    "primaryEncoderIP": {
+      "type": "string",
+      "description": "Specifies the IP address of your primary encoders used for the stream. Required for packaged stream types, not for passthrough streams."
+    },
+    "backupEncoderIP": {
+      "type": "string",
+      "description": "Specifies the IP address of your backup encoders used for the stream. Required for packaged stream types, not for passthrough streams."
+    },
+    "password": {
+      "type": "string",
+      "description": "Optionally, type a password for your encoder to use to access the entry points. Passwords can be made up of any character type, but must be no more than 10 characters long. Leave this option blank if you want the system to generate a password."
+    }
+  }
+}

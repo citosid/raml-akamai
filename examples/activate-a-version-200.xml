@@ -1,0 +1,4 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<response-message>
+   <message>This version of ARL metadata has been submitted to staging network. Please note that it may take upwards of 1 hour for your configuration to take effect on our network. Contact your Akamai representative if you are having problems with your configuration.</message>
+</response-message>

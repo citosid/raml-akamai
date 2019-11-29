@@ -1,0 +1,7 @@
+{
+  "message": "Purge request successful",
+  "requestId": 1223344,
+  "supportId": "12AB34567879879951318-203203776",
+  "estimatedSeconds": 5,
+  "httpStatus": 201
+}

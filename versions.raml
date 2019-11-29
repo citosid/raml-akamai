@@ -1,0 +1,70 @@
+#%RAML 0.8
+title: Versions
+version: 1
+baseUri: /config-media-live/v1
+mediaType: application/json
+
+traits:
+  !include traits/common-traits.yaml
+
+/live:
+  /{domain}:
+    uriParameters:
+      domain:
+        description: |
+          Unique identifier for each domain.
+        type: string
+        required: true
+        example: domain.com
+    /version:
+      displayName: versions
+      post:
+        description: |
+          Create a new version: Create a new profile version.
+        body:
+          application/xml:
+            example: !include examples/create-a-new-version.xml
+        responses:
+          200:
+            body:
+              application/xml:
+                example: !include examples/create-a-new-version-200.xml
+      /{versionId}:
+        displayName: version
+        uriParameters:
+          versionId:
+            description: |
+              Domain's incremental version number.
+            example: 2
+            type: number
+            required: true
+        get:
+          description: |
+            Get a version: Profile version settings.
+          responses:
+            200:
+              body:
+                application/xml:
+                  example: !include examples/get-a-version-200.xml
+        /activation:
+          displayName: activation
+          get:
+            is: [specifiesEnv]
+            description: |
+              Get activation status: Get activation status of the
+              profile version.
+            responses:
+              200:
+                body:
+                  application/xml:
+                    example: !include examples/get-activation-status-200.xml
+          put:
+            is: [specifiesEnv]
+            description: |
+              Activate a version: Activate profile version on an
+              environment.
+            responses:
+              200:
+                body:
+                  application/xml:
+                    example: !include examples/activate-a-version-200.xml

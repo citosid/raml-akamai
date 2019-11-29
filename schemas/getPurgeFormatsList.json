@@ -1,0 +1,13 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/getPurgeFormatsList.json#",
+  "properties" : {
+    "format" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string",
+        "description": "The format of the HD contents (URL, ARL, or CP codes) to be purged."
+      }
+    }
+  }
+}

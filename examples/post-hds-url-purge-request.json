@@ -1,0 +1,10 @@
+{
+  "requestName": "moviePurge",
+  "urlPurge": {
+    "url": "http://iphone-i.akamaihd.net/i/examplehost/test.smil/master.m3u8",
+    "file": [
+      "test/test_220K_movies.mp4",
+      "test/test_500K_movies.mp4"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "cpcode": 12345,
+  "name": "testStream",
+  "dynamic": true,
+  "encoder": {
+    "primaryEncoderIP": "1.1.1.1",
+    "backupEncoderIP": "1.1.1.1",
+    "password": "test123"
+  },
+  "contactDetails": {
+    "primary": "User test",
+    "secondary": "User test"
+  },
+  "email": "abc@example.com",
+  "isSecure": true,
+  "streamEndDate": "2019-02-27T18:30:00.000Z",
+  "authProfiles": [
+    {
+      "eTokenType": "NEW",
+      "requireIP": true,
+      "requirePath": true,
+      "requirePayload": true,
+      "name": "temp",
+      "password": "abc123",
+      "cidr": "1.2.3.4-1.2.3.4"
+    }
+  ]
+}

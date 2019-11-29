@@ -1,0 +1,8 @@
+{
+  "requestName": "Sample Request",
+  "cpcode": [
+    123456,
+    654321
+  ],
+  "delete": false
+}

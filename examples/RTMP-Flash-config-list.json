@@ -1,0 +1,17 @@
+{
+  "configurations": [
+    {
+      "swfLocation": "123456.download.example.com/123456/",
+      "isSecure": false,
+      "isHDConfig": false,
+      "name": "testConfig",
+      "cpcode": 654321,
+      "usePreSpreadSerial": true,
+      "hostAliases": [
+        "default.host.net (default)"
+      ],
+      "isRtmpe": true,
+      "isMbr": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<stream>
+   <stream-type>Universal Streaming Live</stream-type>
+   <stream-name>STREAM1</stream-name>
+   <primary-contact-name>John Doe</primary-contact-name>
+   <secondary-contact-name>Jane Doe</secondary-contact-name>
+   <notification-email>jdoe@example.com</notification-email>
+   <encoder-settings>
+      <primary-encoder-ip>250.250.250.250</primary-encoder-ip>
+      <backup-encoder-ip>250.250.250.251</backup-encoder-ip>
+      <password>password</password>
+   </encoder-settings>
+   <dvr-settings>
+      <dvr>Disabled</dvr>
+   </dvr-settings>
+</stream>

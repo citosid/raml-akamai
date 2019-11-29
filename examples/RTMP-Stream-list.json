@@ -1,0 +1,31 @@
+{
+  "streams": [
+    {
+      "isSecure": false,
+      "createdDate": "2015-02-26T01:06:21.000Z",
+      "primaryEntrypoint": "rtmp://p.ep123456.i.exampleentrypoint.net/EntryPoint",
+      "backupEntrypoint": "rtmp://b.ep123456.i.exampleentrypoint.net/EntryPoint",
+      "playbackSettings": [
+        {
+          "connectionUrl": "rtmp://exampleConnectionUrl.net/live/",
+          "playbackUrl": "testStream1@123456"
+        }
+      ],
+      "status": "Provisioned",
+      "blocked": false,
+      "id": 123456,
+      "cpcode": 654321,
+      "name": "testStream1",
+      "dynamic": true,
+      "encoder": {
+        "primaryEncoderIP": "12.34.56.78",
+        "backupEncoderIP": "78.56.34.12",
+        "password": "test1"
+      },
+      "contactDetails": {
+        "primary": "Test User",
+        "secondary": "Test User"
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+#%RAML 0.8
+title: Purge HD content
+version: "1"
+baseUri: /config-media-live/v1/vod/purge/
+schemas:
+ - getPurgeFormatsListListSchema: !include ./schemas/getPurgeFormatsList.json
+ - getCCUCpcodesListSchema: !include ./schemas/getCCUCpcodesList.json
+ - postHDUrlPurgeRequestSchema: !include ./schemas/postHDUrlPurgeRequest.json
+ - postHDCpcodePurgeRequestSchema: !include ./schemas/postHDCpcodePurgeRequest.json
+ - postRtmpUrlPurgeRequestSchema: !include ./schemas/postRtmpUrlPurgeRequest.json
+ - postRtmpCpcodePurgeRequestSchema: !include ./schemas/postRtmpCpcodePurgeRequest.json
+ - postPurgeResponseSchema: !include ./schemas/HDPurgeStatusInfo.json
+
+/HD_FLASH:
+    displayName: Purge HD_FLASH content
+    description: |
+      Purges the HD content of format `HD_FLASH` on the production network by URL or CP codes.
+    post:
+        description: |
+            Purge Flash content: Purges the HD content of format `HD_FLASH` on the
+            production network by URL or CP codes. See [Purge Flash
+            content by URL or CP code](#flashmodes) for options.
+        body:
+            application/json:
+                schema: postHDUrlPurgeRequestSchema
+                example: !include ./examples/post-hd-flash-url-purge-request.json
+        responses:
+            200:
+                description: Successful Response
+                body:
+                    application/json:
+                        schema: postPurgeResponseSchema
+                        example: !include ./examples/post-purge-successful-response.json
+
+/HLS:
+    displayName: Purge HLS content
+    description: |
+      Purges the HD content of format `HLS` on the production network by URL, ARL, or CP codes.
+    post:
+        description: |
+            Purge HLS content: Purges the HD content of format `HLS` on the production
+            network by URL, ARL, or CP codes.
+            See [Purge HLS content by URL or CP code](#hlsmodes) for options.
+        body:
+            application/json:
+                schema: postHDUrlPurgeRequestSchema
+                example: !include ./examples/post-hls-url-purge-request.json
+        responses:
+            200:
+                description: Successful Response
+                body:
+                    application/json:
+                        schema: postPurgeResponseSchema
+                        example: !include ./examples/post-purge-successful-response.json
+/HDS:
+    displayName: Purge HDS content
+    description: |
+      Purges the HD content of format `HDS` on the production network by URL, ARL, or CP codes.
+    post:
+        description: |
+            Purge HDS content: Purges the HD content of format `HDS` on the production
+            network by URL, ARL, or CP codes.
+            See [Purge HDS content by URL or CP code](#hdsmodes) for
+            options.
+        body:
+            application/json:
+                schema: postHDUrlPurgeRequestSchema
+                example: !include ./examples/post-hds-url-purge-request.json
+        responses:
+            200:
+                description: Successful Response
+                body:
+                    application/json:
+                        schema: postPurgeResponseSchema
+                        example: !include ./examples/post-purge-successful-response.json
+/HD_SILVERLIGHT:
+    displayName: Purge HD_SILVERLIGHT content
+    description: |
+      Purges the HD content of format `HD_SILVERLIGHT` on the production network by URL, ARL, or CP codes.
+    post:
+        description: |
+            Purge Silverlight content: Purges the HD content of format
+            `HD_SILVERLIGHT` on the production network by URL, ARL, or CP
+            codes.
+            See [Purge Silverlight content by URL or CP code](#silverlightmodes)
+            for options.
+
+        body:
+            application/json:
+                schema: postHDUrlPurgeRequestSchema
+                example: !include ./examples/post-hd-silverlight-url-purge-request.json
+        responses:
+            200:
+                description: Successful Response
+                body:
+                    application/json:
+                        schema: postPurgeResponseSchema
+                        example: !include ./examples/post-purge-successful-response.json
+/rtmp/purge:
+    displayName: Purge RTMP content
+    description: |
+      Purges the RTMP content on the production network by URL, ARLs, or CP codes.
+    post:
+        description: |
+            Purge RTMP content: Purges the RTMP content on the production network
+            by URL, ARLs, or CP codes.
+            See [Purge RTMP content by URL or CP code](#rtmpmodes)
+            for options.
+        body:
+            application/json:
+                schema: postRtmpUrlPurgeRequestSchema
+                example: !include ./examples/post-rtmp-url-purge-request.json
+        responses:
+            200:
+                description: Successful Response
+                body:
+                    application/json:
+                        schema: postPurgeResponseSchema
+                        example: !include ./examples/post-purge-successful-response.json
+/formats:
+    displayName: Get all HD purge formats
+    description: |
+      Fetches all possible formats based on the API client permissions.
+      This operation lists the content of all the formats that can be purged in
+      the current managed account for which the API client has been created.
+    get:
+        description: |
+            List purge formats: Obtains all HD purge formats for the
+            corresponding scope tied to the current account. Fetches
+            all possible formats based on the API client
+            permissions.  This operation lists the content of
+            all formats that can be purged in the current managed account
+            for which API client has been created.
+            See [Purge format parameters](#fmtparams) for details on
+            how this operation's response values correspond to
+            parameter values.
+        responses:
+            200:
+                description: Obtains all available formats.
+                body:
+                    application/json:
+                        schema: getPurgeFormatsListListSchema
+                        example: !include ./examples/get-all-formats.json
+/cpcodes:
+    displayName: Get CP codes available for purging.
+    description: |
+      Fetches all HD purge CP codes for corresponding CP code services in the current account.
+      This operation can also fetch the CP codes for specific account based on the given format.
+    get:
+        queryParameters:
+            format:
+                displayName: format
+                description: |
+                  Format of the corresponding CP code to be filtered. It can have one of these values: `HD_FLASH`, `HLS`, `HDS`, `HD_SILVERLIGHT`, or `RTMP`.
+                type: string
+                example: HD_FLASH
+                enum: [HD_FLASH, HLS, HDS, HD_SILVERLIGHT, RTMP]
+                required: false
+                repeat: false
+        description: |
+            List CP codes available for purge: Fetches all HD purge CP codes for corresponding CP code
+            services in the current account. This operation can also fetch the CP codes for a specific account based
+            on the given format.
+        responses:
+            200:
+                description: Successful Response
+                body:
+                    application/json:
+                        schema: getCCUCpcodesListSchema
+                        example: !include ./examples/get-ccu-cpcodes.json

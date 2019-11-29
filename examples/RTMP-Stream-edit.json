@@ -1,0 +1,27 @@
+{
+  "cpcode": 123456,
+  "name": "TempStream",
+  "dynamic": true,
+  "email": "abc@example.com",
+  "streamEndDate": "2019-03-30T18:30:00.000Z",
+  "encoder": {
+    "password": "abc123",
+    "primaryEncoderIP": "1.1.1.1",
+    "backupEncoderIP": "1.1.1.1"
+  },
+  "contactDetails": {
+    "primary": "user test",
+    "secondary": "user test"
+  },
+  "authProfiles": [
+    {
+      "name": "abctemp",
+      "password": "abc123",
+      "eTokenType": "NO_CHANGE",
+      "requireIP": true,
+      "requirePath": true,
+      "requirePayload": true,
+      "cidr": "1.2.3.4/12"
+    }
+  ]
+}

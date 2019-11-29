@@ -1,0 +1,40 @@
+{
+  "isSecure": true,
+  "createdDate": "2018-10-15T10:18:23.000Z",
+  "primaryEntrypoint": "rtmp://p.ep123456.i.exampleentrypoint.net/EntryPoint",
+  "backupEntrypoint": "rtmp://b.ep123456.i.exampleentrypoint.net/EntryPoint",
+  "playbackSettings": [
+    {
+      "connectionUrl": "rtmp://exampleConnectionUrl.net/live/",
+      "playbackUrl": "StreamTemp123@s123456"
+    }
+  ],
+  "status": "Not Yet Provisioned",
+  "email": "user@example.com",
+  "blocked": false,
+  "id": 123456,
+  "cpcode": 65432,
+  "name": "StreamTemp123",
+  "dynamic": true,
+  "encoder": {
+    "primaryEncoderIP": "1.1.1.1",
+    "backupEncoderIP": "198.199.26.36",
+    "password": "abc123"
+  },
+  "streamEndDate": "2019-03-30T18:30:00.000Z",
+  "contactDetails": {
+    "primary": "Jack King",
+    "secondary": "Aditya Sharma"
+  },
+  "authProfiles": [
+    {
+      "name": "abctemp",
+      "password": "abc123",
+      "eTokenType": "NO_CHANGE",
+      "requireIP": true,
+      "requirePath": true,
+      "requirePayload": true,
+      "cidr": "1.2.3.4/12"
+    }
+  ]
+}

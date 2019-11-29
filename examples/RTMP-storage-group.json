@@ -1,0 +1,17 @@
+[
+  {
+    "cpcode": 123456,
+    "downloadDomain": "123456.download.example.com",
+    "location": "123456.download.example.com/123456/"
+  },
+  {
+    "cpcode": 654321,
+    "downloadDomain": "654321.download.example.com",
+    "location": "654321.download.example.com/654321/"
+  },
+  {
+    "cpcode": 246813,
+    "downloadDomain": "246813.download.example.com",
+    "location": "246813.download.example.com/246813/"
+  }
+]

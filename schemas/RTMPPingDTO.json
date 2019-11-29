@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/PingService/RTMPPingDTO.json#",
+  "type": "object",
+  "properties": {
+    "pingable": {
+      "type": "boolean",
+      "description": "Specify whether an encoder IP is pingable."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "used": [
+    {
+      "cpcode": 12345,
+      "name": "cpcode1"
+    },
+    {
+      "cpcode": 54321,
+      "name": "cpcode2"
+    },
+    {
+      "cpcode": 67890,
+      "name": "cpcode3"
+    }
+  ],
+  "unused": [
+    {
+      "cpcode": 24680,
+      "name": "cpcode4"
+    },
+    {
+      "cpcode": 13579,
+      "name": "cpcode5"
+    },
+    {
+      "cpcode": 21345,
+      "name": "cpcode6"
+    }
+  ]
+}

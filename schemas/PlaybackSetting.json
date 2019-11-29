@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/PlaybackSetting.json#",
+  "type": "array",
+  "description": "Information regarding how to play the stream.",
+  "items": {
+    "type": "object",
+    "description": "Information about how to play the stream.",
+    "properties": {
+      "connectionUrl": {
+        "type": "string",
+        "description": "Connection settings for your encoder to publish the stream."
+      },
+      "playbackUrl": {
+        "type": "string",
+        "description": "Playback settings for your player to play the stream."
+      }
+    },
+    "required": [
+      "connectionUrl",
+      "playbackUrl"
+    ]
+  }
+}

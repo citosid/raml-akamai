@@ -1,0 +1,11 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<event>
+   <stream-id>10001</stream-id>
+   <event-name>event_name</event-name>
+   <primary-event>
+      <archive-start-time>05/15/2013 12:40:21 PM</archive-start-time>
+      <archive-end-time>06/15/2013 12:38:00 PM</archive-end-time>
+      <on-air-time>05/15/2013 12:40:21 PM</on-air-time>
+      <delete-time>05/15/2013 12:40:21 PM</delete-time>
+   </primary-event>
+</event>

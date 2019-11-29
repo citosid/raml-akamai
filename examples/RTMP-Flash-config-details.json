@@ -1,0 +1,26 @@
+{
+  "name": "samplename",
+  "cpcode": 12345,
+  "isSecure": true,
+  "authProfiles": [
+    {
+      "name": "temp",
+      "password": "abc123",
+      "eTokenType": "NO_CHANGE",
+      "requireIP": true,
+      "requirePath": false,
+      "requirePayload": true,
+      "cidr": "1.2.3.4-4.5.6.7"
+    }
+  ],
+  "usePreSpreadSerial": true,
+  "hostAliases": [
+    "default.hostname.net (default)",
+    "testHost1.com",
+    "testHost2.com"
+  ], 
+  "swfPath": "check123",
+  "swfLocation": "654321.download.example.com/654321/",
+  "isRtmpe": true,
+  "isMbr": true
+}

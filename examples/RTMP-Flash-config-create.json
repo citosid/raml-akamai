@@ -1,0 +1,26 @@
+{
+  "name": "testConfig123",
+  "cpcode": 12345,
+  "usePreSpreadSerial": true,
+  "hostAliases": [
+    "testHost1",
+    "testHost2",
+    "testHost3"
+  ],
+  "isRtmpe": false,
+  "isMbr": false,
+  "isSecure": true,
+  "swfPath": "temp",
+  "swfLocation": "123456.download.example.com/123456/",
+  "authProfiles": [
+    {
+      "eTokenType": "NEW",
+      "requireIP": true,
+      "requirePath": true,
+      "requirePayload": true,
+      "name": "temp",
+      "password": "abc123",
+      "cidr": "1.2.3.4/32"
+    }
+  ]
+}

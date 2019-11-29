@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/RTMPCpcodesDTO.json#",
+  "type": "object",
+  "description": "The list of used and unused Content Provider codes for creating RTMP configurations or streams.You use CP codes in the Akamai system to track and report delivered services. This CP code is based on JSON for RTMP ingest only. You cannot create two MSL RTMP configuration based on the same CP code.",
+  "properties": {
+    "used": {
+      "type": "array",
+      "description": "The list of CP codes used in the system.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cpcode": {
+            "type": "integer",
+            "description": "The CP code that you can use to create an RTMP configuration or stream."
+          },
+          "name": {
+            "type": "string",
+            "description": "CP code name."
+          }
+        },
+        "required": [
+          "cpcode",
+          "name"
+        ]
+      }
+    },
+    "unused": {
+      "type": "array",
+      "items": {
+        "description": "The list of unused CP codes available to provision RTMP configurations and streams.",
+        "$ref": "resource:/descriptors/config-media-live/v1/schemas/RTMPCpcodesDTO.json#/properties/used/items"
+      }
+    }
+  }
+}

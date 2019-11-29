@@ -1,0 +1,27 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<domain-version>
+   <delivery-formats>
+      <hd-flash-1.0>Disabled</hd-flash-1.0>
+      <adobe-hds>Disabled</adobe-hds>
+      <apple-hls>Enabled</apple-hls>
+   </delivery-formats>
+   <security>
+      <hd-flash>
+         <geo-blocking />
+      </hd-flash>
+      <securehd-policy-editor>Disabled</securehd-policy-editor>
+   </security>
+   <advanced-configuration>
+      <adobe-hds-advanced-config />
+      <hd-flash-advanced-config />
+      <apple-hls-advanced-config>
+         <hls-segment-duration>10.0</hls-segment-duration>
+         <hls-live-delay>10</hls-live-delay>
+         <audio-only-stream-from-lowest-bitrate>Disabled</audio-only-stream-from-lowest-bitrate>
+         <insert-audio-poster>Disabled</insert-audio-poster>
+         <add-alternate-stream>Enabled</add-alternate-stream>
+         <limit-segments-per-playlist>0</limit-segments-per-playlist>
+         <serve-archive>Enabled</serve-archive>
+      </apple-hls-advanced-config>
+   </advanced-configuration>
+</domain-version>

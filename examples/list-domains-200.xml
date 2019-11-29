@@ -1,0 +1,95 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<domains>
+   <domain>
+      <configuration-details>
+         <configuration-name>hdconfig1</configuration-name>
+         <hostname>hdconfig1-f.akamai-domain.net</hostname>
+         <reporting-cpcode>123456</reporting-cpcode>
+         <configuration-type>Universal Streaming Live</configuration-type>
+         <access-control-group>ABCDEF</access-control-group>
+      </configuration-details>
+      <archive-configuration>
+         <archive-name>hdconfig1 [HD Flash Live]</archive-name>
+         <archive-cpcode>987654</archive-cpcode>
+         <dvr-path>DVR</dvr-path>
+         <domain-name>hdconfig1.akamai-domain.net</domain-name>
+      </archive-configuration>
+      <advanced-configuration>Disabled</advanced-configuration>
+      <fms-backup-option>Disabled</fms-backup-option>
+      <domain-versions>
+         <domain-version>
+            <version>1</version>
+            <delivery-formats>
+               <hd-flash-1.0>Enabled</hd-flash-1.0>
+               <adobe-hds>Disabled</adobe-hds>
+               <apple-hls>Disabled</apple-hls>
+            </delivery-formats>
+            <security>
+               <hd-flash>
+                  <token-authorization>Disabled</token-authorization>
+                  <player-verification>Disabled</player-verification>
+                  <geo-blocking />
+               </hd-flash>
+               <securehd-policy-editor>Disabled</securehd-policy-editor>
+            </security>
+            <advanced-configuration>
+               <adobe-hds-advanced-config />
+               <hd-flash-advanced-config>
+                  <live-delay>14</live-delay>
+               </hd-flash-advanced-config>
+               <apple-hls-advanced-config />
+            </advanced-configuration>
+            <hd-client-support-information />
+            <author>example@domain.com</author>
+            <production-deployment-status>Activated</production-deployment-status>
+            <activate-environment>Production</activate-environment>
+         </domain-version>
+      </domain-versions>
+   </domain>
+   <domain>
+      <configuration-details>
+         <configuration-name>hdconfig2</configuration-name>
+         <hostname>hdconfig2-f.akamai-domain.net</hostname>
+         <reporting-cpcode>678901</reporting-cpcode>
+         <configuration-type>Universal Streaming Live</configuration-type>
+         <access-control-group>1-ABCDEF</access-control-group>
+      </configuration-details>
+      <archive-configuration>
+         <archive-name>hdconfig2 [HD Flash Live]</archive-name>
+         <archive-cpcode>543210</archive-cpcode>
+         <dvr-path>DVR</dvr-path>
+         <domain-name>hdconfig2.akamai-domain.net</domain-name>
+      </archive-configuration>
+      <advanced-configuration>Disabled</advanced-configuration>
+      <fms-backup-option>Disabled</fms-backup-option>
+      <domain-versions>
+         <domain-version>
+            <version>1</version>
+            <delivery-formats>
+               <hd-flash-1.0>Enabled</hd-flash-1.0>
+               <adobe-hds>Disabled</adobe-hds>
+               <apple-hls>Disabled</apple-hls>
+            </delivery-formats>
+            <security>
+               <hd-flash>
+                  <token-authorization>Disabled</token-authorization>
+                  <player-verification>Disabled</player-verification>
+                  <geo-blocking />
+               </hd-flash>
+               <securehd-policy-editor>Disabled</securehd-policy-editor>
+            </security>
+            <advanced-configuration>
+               <adobe-hds-advanced-config />
+               <hd-flash-advanced-config>
+                  <live-delay>14</live-delay>
+               </hd-flash-advanced-config>
+               <apple-hls-advanced-config />
+            </advanced-configuration>
+            <hd-client-support-information />
+            <author>example@domain.com</author>
+            <production-deployment-status>Activated</production-deployment-status>
+            <activate-environment>Production</activate-environment>
+         </domain-version>
+      </domain-versions>
+   </domain>
+</domains>

@@ -1,0 +1,23 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/CCUCpCode",
+  "description": "Provides the details about the Content provider Code and the product services tied to it.",
+  "required": ["cpCode", "description", "products"],
+  "properties" : {
+    "cpCode" : {
+      "type" : "integer",
+      "description": "The content provider code assigned to HD content."
+    },
+    "description" : {
+      "type" : "string",
+      "description": "Describes the specified to the content provider code."
+    },
+    "products" : {
+      "type" : "array",
+      "description": "Provides information about the products that are attached to the CP code",
+      "items" : {
+        "$ref" : "resource:/descriptors/config-media-live/v1/vod/schemas/CCUCpCodeProduct.json"
+      }
+    }
+  }
+}

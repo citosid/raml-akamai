@@ -1,0 +1,27 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<archive-storage-locations>
+   <archive-storage-location>
+      <name>Asia and US West</name>
+   </archive-storage-location>
+   <archive-storage-location>
+      <name>Asia/Ireland</name>
+   </archive-storage-location>
+   <archive-storage-location>
+      <name>Hong Kong/Malaysia</name>
+   </archive-storage-location>
+   <archive-storage-location>
+      <name>Asia/Asia preferred</name>
+   </archive-storage-location>
+   <archive-storage-location>
+      <name>EU/EU preferred</name>
+   </archive-storage-location>
+   <archive-storage-location>
+      <name>US/US preferred</name>
+   </archive-storage-location>
+   <archive-storage-location>
+      <name>EU/US preferred</name>
+   </archive-storage-location>
+   <archive-storage-location>
+      <name>Asia/Europe</name>
+   </archive-storage-location>
+</archive-storage-locations>

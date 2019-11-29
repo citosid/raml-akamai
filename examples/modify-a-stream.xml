@@ -1,0 +1,16 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<stream>
+   <stream-name>Sample_Stream</stream-name>
+   <primary-contact-name>John Doe</primary-contact-name>
+   <secondary-contact-name>Jane Doe</secondary-contact-name>
+   <notification-email>jdoe@example.com</notification-email>
+   <encoder-settings>
+      <primary-encoder-ip>8.8.8.9</primary-encoder-ip>
+      <backup-encoder-ip>8.8.8.9</backup-encoder-ip>
+      <password>abc123</password>
+   </encoder-settings>
+   <dvr-settings>
+      <dvr>Enabled</dvr>
+      <dvr-window>24</dvr-window>
+      </dvr-settings>
+</stream>

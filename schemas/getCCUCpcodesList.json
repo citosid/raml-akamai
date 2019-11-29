@@ -1,0 +1,13 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/getCCUCpcodesList.json#",
+  "description": "Provides a set of HD purge CP codes for the corresponding CP code services in the current account. The [List CP codes available for purge](#getgetcpcodesavailableforpurging) operation can also fetch the CP codes for specific accounts based on the given format.",
+  "required": ["allPurgeCpCodes"],
+  "properties" : {
+    "allPurgeCpCodes" : {
+      "type": "array",
+      "description": "List of HD purge CP codes for the corresponding CP code services in the current account.",
+      "$ref": "resource:/descriptors/config-media-live/v1/vod/schemas/CCUCpCode"
+    }
+  }
+}

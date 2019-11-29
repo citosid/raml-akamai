@@ -1,0 +1,16 @@
+REMOVE<stream>
+    <stream-id>12345</stream-id>
+   <stream-type>Universal Streaming Live</stream-type>
+   <stream-name>STREAM1</stream-name>
+   <primary-contact-name>Stream User1</primary-contact-name>
+   <secondary-contact-name>Stream User2</secondary-contact-name>
+   <notification-email>example@domain.com</notification-email>
+   <encoder-settings>
+      <primary-encoder-ip>250.250.250.250</primary-encoder-ip>
+      <backup-encoder-ip>250.250.250.251</backup-encoder-ip>
+      <password>password</password>
+   </encoder-settings>
+   <dvr-settings>
+      <dvr>Disabled</dvr>
+   </dvr-settings>
+</stream>

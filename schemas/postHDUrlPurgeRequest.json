@@ -1,0 +1,15 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/postHDUrlPurgeRequest.json#",
+      "description": "This describes the `PurgeRequest` object, which purges content based on either URLs or CP codes.",
+  "required": ["urlPurge"],
+  "properties" : {
+    "requestName" : {
+      "type" : "string",
+      "description": "Describes the purpose of the purge request."
+    },
+    "urlPurge" : {
+      "$ref" : "resource:/descriptors/config-media-live/v1/vod/schemas/URLPurge.json#"
+    }
+  }
+}

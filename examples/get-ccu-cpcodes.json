@@ -1,0 +1,38 @@
+{
+  "allPurgeCpCodes": [
+    {
+      "cpCode": 123455,
+      "description": "Flash CP code",
+      "products": [
+        {
+          "productName": "HD_On_Demand::Flash",
+          "productDescription": "Media Services On Demand Flash"
+        },
+        {
+          "productName": "On_Demand_Str::Flash",
+          "productDescription": "On demand Flash streaming"
+        }
+      ]
+    },
+    {
+      "cpCode": 123456,
+      "description": "HLS CP code",
+      "products": [
+        {
+          "productName": "HD_On_Demand::iDevices",
+          "productDescription": "On demand HLS streaming"
+        }
+      ]
+    },
+    {
+      "cpCode": 123457,
+      "description": "Silverlight CP code",
+      "products": [
+        {
+          "productName": "On_Demand_Str::HD_Silverlight",
+          "productDescription": "On demand Silverlight streaming"
+        }
+      ]
+    }
+  ]
+}

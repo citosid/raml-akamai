@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/RTMPContactsDTO.json#",
+  "type": "object",
+  "properties": {
+    "contact": {
+      "type": "array",
+      "description": "Provides the contact information of the person in your organization who is responsible for entry point availability issues.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person to contact regarding entry point availability issues."
+          }
+        }
+      }
+    }
+  }
+}

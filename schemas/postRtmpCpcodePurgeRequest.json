@@ -1,0 +1,22 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/postRtmpCpcodePurgeRequest.json#",
+  "required": ["cpcode","delete"],
+  "properties" : {
+    "requestName" : {
+      "type" : "string",
+      "description": "The text to describe the purpose of the Purge request."
+    },
+    "cpcode" : {
+      "type" : "array",
+      "items" : {
+        "type" : "integer",
+        "description": "The Content Provider Code to be purged or Invalidated."
+      }
+    },
+    "delete" : {
+      "type" : "boolean",
+      "description": "The boolean to perform either 'Invalidate' or 'Purge' on the RTMP Content."
+    }
+  }
+}

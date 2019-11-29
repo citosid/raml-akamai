@@ -1,0 +1,18 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/postHDCpcodePurgeRequest.json#",
+  "required": ["cpcode"],
+  "properties" : {
+    "requestName" : {
+      "type" : "string",
+      "description": "Describes the purpose of the purge request."
+    },
+    "cpcode" : {
+      "type" : "array",
+      "items" : {
+        "type" : "integer",
+        "description": "This specifies the content provider codes for which to purge content."
+      }
+    }
+  }
+}

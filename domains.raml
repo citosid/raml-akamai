@@ -1,0 +1,68 @@
+#%RAML 0.8
+title: Domains
+version: 1
+baseUri: /config-media-live/v1
+mediaType: application/json
+
+/live:
+  displayName: domains
+  get:
+    description: |
+      List domains: Returns a list of all Universal Streaming and
+      IDevices domains currently created on the account.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/list-domains-200.xml
+  post:
+    description: |
+      Create a domain: Creates a new configuration with the assigned
+      domain, initialized at version 1.  Domains are either based on a
+      Stream Packaging configuration or an HLS, HDS, and DASH Ingest
+      configuration.  See the [Domain](#domainxml) object for details on
+      each type.
+
+      Before you can create new Stream Packaging streams, you must
+      create at least one Stream Packaging configuration to establish
+      parameters for packaged streams, such as the CP code and
+      hostname.  NetStorage is used with Media Services Live as
+      your stream archive's storage location. Therefore, you must have
+      a NetStorage CP code set up and dedicated for use with Media
+      Services Live, or you will be unable to create configurations.
+      You can create as many configurations as you have CP codes
+      available, depending on how you would like to have your streams
+      being reported on and billed.
+    body:
+      application/xml:
+        example: !include examples/create-a-domain.xml
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/create-a-domain-200.xml
+  /{domain}:
+    displayName: domain
+    uriParameters:
+      domain:
+        description: |
+          Unique identifier for each domain.
+        type: string
+        required: true
+        example: domain.com
+    get:
+      description: |
+        Get a domain: Get the profile settings.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/get-a-domain-200.xml
+    delete:
+      description: |
+        Remove a domain: Deletes a domain.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/remove-a-domain-200.xml

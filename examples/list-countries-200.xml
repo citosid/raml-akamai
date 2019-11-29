@@ -1,0 +1,39 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<countries>
+   <country>
+      <country-code>AF</country-code>
+      <country-name>AFGHANISTAN</country-name>
+   </country>
+   <country>
+      <country-code>AL</country-code>
+      <country-name>ALBANIA</country-name>
+   </country>
+   <country>
+      <country-code>DZ</country-code>
+      <country-name>ALGERIA</country-name>
+   </country>
+   <country>
+      <country-code>AS</country-code>
+      <country-name>AMERICAN SAMOA</country-name>
+   </country>
+   <country>
+      <country-code>AD</country-code>
+      <country-name>ANDORRA</country-name>
+   </country>
+   <country>
+      <country-code>AO</country-code>
+      <country-name>ANGOLA</country-name>
+   </country>
+   <country>
+      <country-code>AI</country-code>
+      <country-name>ANGUILLA</country-name>
+   </country>
+   <country>
+      <country-code>AQ</country-code>
+      <country-name>ANTARCTICA</country-name>
+   </country>
+   <country>
+      <country-code>ZW</country-code>
+      <country-name>ZIMBABWE</country-name>
+   </country>
+</countries>

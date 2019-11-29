@@ -1,0 +1,75 @@
+#%RAML 0.8
+title: Utilities
+version: 1
+baseUri: /config-media-live/v1
+mediaType: application/json
+
+/live/utils:
+  /archivelocation:
+    displayName: archivelocation
+    get:
+      description: |
+        List archive locations: Returns a list of NetStorage
+        archive locations to be used for provisioning.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/list-archive-locations-200.xml
+  /contacts:
+    displayName: contacts
+    get:
+      description: |
+        List contacts: List an organization's contact names who are
+        responsible for the stream entrypoint availability.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/list-contacts-200.xml
+  /countries:
+    displayName: countries
+    get:
+      description: |
+        List countries: Returns a list of countries supported when
+        creating a configuration.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/list-countries-200.xml
+  /cpcode:
+    displayName: cp codes
+    get:
+      description: |
+        List CP codes: Returns a list of HD Live and NetStorage
+        CPCodes available to be used for provisioning.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/list-cp-codes-200.xml
+  /delivery:
+    /format:
+      displayName: delivery formats
+      get:
+        description: |
+          List delivery formats: Returns a list of delivery formats
+          available for provisioning.
+        responses:
+          200:
+            body:
+              application/xml:
+                example: !include examples/list-delivery-formats-200.xml
+  /ingest:
+    /format:
+      displayName: ingest formats
+      get:
+        description: |
+          List ingest formats: Returns a list of ingest formats
+          available for provisioning.
+        responses:
+          200:
+            body:
+              application/xml:
+                example: !include examples/list-ingest-formats-200.xml

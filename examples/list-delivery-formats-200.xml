@@ -1,0 +1,6 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<delivery-format-list>
+   <hd-flash-1.0 />
+   <adobe-hds />
+   <apple-hls />
+</delivery-format-list>

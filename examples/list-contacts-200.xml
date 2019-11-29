@@ -1,0 +1,11 @@
+REMOVE<contacts>
+   <contact>
+      <name>NAME- 1</name>
+   </contact>
+   <contact>
+      <name>NAME -2</name>
+   </contact>
+   <contact>
+      <name>Name -3</name>
+   </contact>
+</contacts>

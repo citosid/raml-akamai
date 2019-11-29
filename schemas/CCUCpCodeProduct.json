@@ -1,0 +1,16 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/CCUCpCodeProduct.json#",
+  "description": "The product services and the description being tied to the CP Code.",
+  "required": ["productName", "productDescription"],
+  "properties" : {
+    "productName" : {
+      "type" : "string",
+      "description": "Name of a product for this CP code, under which you provisioned HD media content."
+    },
+    "productDescription" : {
+      "type" : "string",
+      "description": "Describes the CP code assigned to HD media content."
+    }
+  }
+}

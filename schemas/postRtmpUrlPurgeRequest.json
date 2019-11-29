@@ -1,0 +1,18 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/postRtmpUrlPurgeRequest.json#",
+  "required": ["urlPurge","delete"],
+  "properties" : {
+    "requestName" : {
+      "type" : "string",
+      "description": "The text to describe the purpose of the Purge request."
+    },
+    "urlPurge" : {
+      "$ref" : "resource:/descriptors/config-media-live/v1/vod/schemas/URLPurge.json#"
+    },
+    "delete" : {
+      "type" : "boolean",
+      "description": "When enabled, the purge results in deleting content from the cache. Otherwise by default, content invalidates and more gracefully reloads content from origin."
+    }
+  }
+}

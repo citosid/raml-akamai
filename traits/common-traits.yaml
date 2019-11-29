@@ -1,0 +1,9 @@
+- specifiesEnv:
+    queryParameters:
+      environment:
+        required: true
+        example: production
+        type: string
+        description: |
+          Specifies whether the environment is `staging` for
+          testing or `production` to go live.

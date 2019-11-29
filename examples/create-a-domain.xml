@@ -1,0 +1,37 @@
+REMOVE<domain>
+    <configuration-details>
+        <configuration-name>manch_123</configuration-name>
+        <hostname>open736833-lh.edgeflash.qa.akamai.com</hostname>
+        <reporting-cpcode>736833</reporting-cpcode>
+        <configuration-type>Universal Streaming Live</configuration-type>
+        <access-control-group>C-C8KEVT</access-control-group>
+    </configuration-details>
+    <archive-configuration>
+        <archive-cpcode>736847</archive-cpcode>
+        <archive-zones>
+            <archive-zone>
+                <zone>asia</zone>
+            </archive-zone>
+        </archive-zones>
+    </archive-configuration>
+    <domain-versions>
+        <domain-version>
+            <delivery-formats>
+                <hd-flash-1.0>Disabled</hd-flash-1.0>
+                <adobe-hds>Enabled</adobe-hds>
+                <apple-hls>Enabled</apple-hls>
+            </delivery-formats>
+            <advanced-configuration>
+                <adobe-hds-advanced-config>
+                    <hds-segment-duration>5</hds-segment-duration>
+                    <hds-live-delay>2</hds-live-delay>
+                </adobe-hds-advanced-config>
+                <apple-hls-advanced-config>
+                    <hls-segment-duration>10</hls-segment-duration>
+                    <audio-only-stream-from-lowest-bitrate>Enabled</audio-only-stream-from-lowest-bitrate>
+                </apple-hls-advanced-config>
+            </advanced-configuration>
+            <edge-hostname-map>w17</edge-hostname-map>
+        </domain-version>
+    </domain-versions>
+</domain>

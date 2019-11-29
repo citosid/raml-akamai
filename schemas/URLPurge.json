@@ -1,0 +1,18 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/URLPurge.json#",
+  "description": "Either the URL or the ARL files to purge.",
+  "properties" : {
+    "url" : {
+      "type" : "string",
+      "description": "The full, scheme-qualified URL to purge."
+    },
+    "file" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string",
+        "description": "The set of full, scheme-qualified Akamai resource locator (ARL) files to purge. To purge more than one ARL, separate each value with a newline (`\n`) sequence. Use purge by ARL only when other purging methods are ineffective. Your Akamai representative can help you determine whether this method is appropriate."
+      }
+    }
+  }
+}

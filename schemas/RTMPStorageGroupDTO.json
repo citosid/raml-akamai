@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-04-schema#",
+    "id": "resource:/descriptors/config-media-live/v1/schemas/RTMPStorageGroupDTO.json#",
+    "type": "array",
+  "items": {
+    "type": "object",
+    "description": "You can keep your content for distribution in a storage group.",
+    "properties": {
+      "cpcode": {
+        "type": "integer",
+        "description": "The Content Provider code that Akamai supplies for RTMP streaming. You use CP codes in the Akamai system to track and report delivered services."
+      },
+      "downloadDomain": {
+        "type": "string",
+        "description": "The hostname of the machine in which you download the storage group and manage its content."
+      },
+      "location": {
+        "type": "string",
+        "description": "The storage group hostname and URL path."
+      }
+    },
+    "required": [
+      "cpcode",
+      "downloadDomain",
+      "location"
+    ]
+  }
+}

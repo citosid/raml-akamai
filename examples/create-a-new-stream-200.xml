@@ -1,0 +1,36 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<stream>
+   <stream-id>10001</stream-id>
+   <stream-type>Universal Streaming Live</stream-type>
+   <stream-name>STREAM1</stream-name>
+   <primary-contact-name>Stream User1</primary-contact-name>
+   <secondary-contact-name>Stream User2</secondary-contact-name>
+   <status>Not yet provisioned</status>
+   <notification-email>example@domain.com</notification-email>
+   <encoder-settings>
+      <primary-encoder-ip>250.250.250.250</primary-encoder-ip>
+      <backup-encoder-ip>250.250.250.251</backup-encoder-ip>
+      <username>12345</username>
+      <password>password</password>
+   </encoder-settings>
+   <dvr-settings>
+      <dvr>Disabled</dvr>
+   </dvr-settings>
+   <security-1.0>
+      <token-authorization>Disabled</token-authorization>
+      <player-verification>Disabled</player-verification>
+   </security-1.0>
+   <entrypoints>
+      <entrypoint>
+         <type>Backup</type>
+         <domain-name>b.ep10001.i.akamaidomain.net</domain-name>
+      </entrypoint>
+      <entrypoint>
+         <type>Primary</type>
+         <domain-name>p.ep10001.i.akamaidomain.net</domain-name>
+      </entrypoint>
+   </entrypoints>
+   <hd-flash-1.0-playback-url>http://akamai-lh.akamai-domain.net/[EVENT_ANGLE_BITRATE]@10001</hd-flash-1.0-playback-url>
+   <hds-playback-url>http://akamai-lh.akamai-domain.net/z/[EVENT_ANGLE]@10001/manifest.f4m</hds-playback-url>
+   <hls-playback-url>http://akamai-lh.akamai-domain.net/i/[EVENT_ANGLE]@10001/master.m3u8</hls-playback-url>
+</stream>

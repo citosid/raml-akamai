@@ -1,0 +1,27 @@
+{
+  "type" : "object",
+  "id" : "resource:/descriptors/config-media-live/v1/vod/schemas/HDPurgeStatusInfo.json#",
+  "description" : "Response to the purge request.",
+  "properties" : {
+    "message" : {
+      "type" : "string",
+      "description" : "A high-level description of the request's status."
+    },
+    "requestId" : {
+      "type" : "integer",
+      "description": "The ID to keep track of the HD purge request."
+    },
+    "supportId" : {
+      "type" : "string",
+      "description" : "Support ID from the portal. This is useful when interacting with customer support about issues related to purge."
+    },
+    "estimatedSeconds" : {
+      "type" : "integer",
+      "description" : "Estimated time in seconds to complete the purge request."
+    },
+    "httpStatus" : {
+      "type" : "integer",
+      "description" : "HTTP status from the portal."
+    }
+  }
+}

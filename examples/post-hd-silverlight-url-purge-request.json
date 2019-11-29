@@ -1,0 +1,10 @@
+{
+  "requestName": "PurgeRequest",
+  "urlPurge": {
+    "url": "http://adobehttptest-f.akamaihd.net/z/example/test.smil/manifest.f4m",
+    "file": [
+      "test/test_adobe_http.f4m",
+      "test/test_adobe_http_220kSeg1.f4x"
+    ]
+  }
+}

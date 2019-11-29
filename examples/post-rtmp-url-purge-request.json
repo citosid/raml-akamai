@@ -1,0 +1,9 @@
+{
+  "requestName": "PurgeRequest",
+  "urlPurge": {
+    "file": [
+      "rtmp://cp325140.edgefcs.net/ondemand/clips1/summit.mp4"
+    ]
+  },
+  "delete": false
+}

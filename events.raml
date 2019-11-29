@@ -1,0 +1,81 @@
+#%RAML 0.8
+title: Events
+version: 1
+baseUri: /config-media-live/v1
+mediaType: application/json
+
+/live/{domain}/stream/{streamId}/event:
+  displayName: events
+  uriParameters:
+    domain:
+      description: |
+        Unique identifier for each domain.
+      type: string
+      required: true
+      example: domain.com
+    streamId:
+      description: |
+        Unique identifier for each stream.
+      type: number
+      required: true
+      example: 10000
+  get:
+    description: |
+      List events: List the stream's events.
+
+      __NOTE__: The event functionality works only for the stream
+      packaging streams. It does not work for HLS ingest streams.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/list-events-200.xml
+  /{eventName}:
+    displayName: event
+    uriParameters:
+      eventName:
+        description: |
+          Human-readable event name.
+        type: string
+        required: true
+        example: event_name
+    get:
+      description: |
+        Get an event: Get primary and backup archive details for an
+        event.
+
+        __NOTE__: The event functionality works only for the stream
+        packaging streams. It does not work for HLS ingest streams.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/get-an-event-200.xml
+    put:
+      description: |
+        Modify an event: Update a stream event. The
+        `off-air-time` element corresponds to the __On Air End__ field
+        in Control Center.
+
+        __NOTE__: The event functionality works only for the stream
+        packaging streams. It does not work for HLS ingest streams.
+      body:
+        application/xml:
+          example: !include examples/modify-an-event.xml
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/modify-an-event-200.xml
+    delete:
+      description: |
+        Remove an event: Delete the event details.  You can delete
+        your events at any time.
+
+        __NOTE__: The event functionality works only for the stream
+        packaging streams. It does not work for HLS ingest streams.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/remove-an-event-200.xml

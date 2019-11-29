@@ -1,0 +1,25 @@
+REMOVE<?xml version="1.0" encoding="UTF-8"?>
+<event-list>
+   <event>
+      <stream-id>10001</stream-id>
+      <event-name>news_event</event-name>
+      <primary-event>
+         <archive-start-time>05/19/2013 19:42:10 AM</archive-start-time>
+         <archive-end-time>06/21/2013 07:37:42 PM</archive-end-time>
+      </primary-event>
+      <backup-event>
+         <archive-start-time>05/19/2013 19:42:10 AM</archive-start-time>
+         <archive-end-time>06/21/2013 07:37:42 PM</archive-end-time>
+      </backup-event>
+   </event>
+   <event>
+      <stream-id>10001</stream-id>
+      <event-name>sports_event</event-name>
+      <primary-event>
+         <archive-start-time>05/15/2013 12:40:21 PM</archive-start-time>
+         <archive-end-time>06/15/2013 12:38:00 PM</archive-end-time>
+         <on-air-time>05/15/2013 12:40:21 PM</on-air-time>
+         <delete-time>05/15/2013 12:40:21 PM</delete-time>
+      </primary-event>
+   </event>
+</event-list>

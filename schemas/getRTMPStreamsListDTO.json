@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/getRTMPStreamsListDTO.json#",
+  "type": "object",
+  "properties": {
+    "streams": {
+      "type": "array",
+      "items": {
+        "$ref": "resource:/descriptors/config-media-live/v1/schemas/getRTMPStreamDTO.json#"
+      }
+    }
+  }
+}

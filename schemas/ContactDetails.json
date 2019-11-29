@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/ContactDetails.json#",
+  "type": "object",
+  "description": "Provides information about the people in your organization responsible for entry point availability issues.",
+  "properties": {
+    "primary": {
+      "type": "string",
+      "description": "The primary person in your organization to contact regarding entry point availability issues."
+    },
+    "secondary": {
+      "type": "string",
+      "description": "The secondary person in your organization to contact regarding entry point availability issues."
+    }
+  },
+  "required": [
+    "primary",
+    "secondary"
+  ]
+}

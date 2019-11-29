@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/postRTMPStreamDTO.json#",
+  "type": "object",
+    "description": "Creates an RTMP stream. Real-Time Messaging Protocol (RTMP) is a protocol for streaming audio, video and data over the internet. Media Services Live Stream Packaging and HLS/HDS/DASH ingest APIs support only XML. However, MSL RTMP Streaming supports JSON.",
+  "required": [
+    "cpcode",
+    "name",
+    "encoder",
+    "contactDetails",
+    "dynamic",
+    "event",
+    "email",
+    "isSecure"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "A unique ID for your stream."
+    },
+    "isSecure": {
+      "type": "boolean",
+      "description": "Specify whether the secure profiles are enabled on the stream."
+    },
+    "createdDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time when your stream is created."
+    },
+    "primaryEntrypoint": {
+      "type": "string",
+      "description": "Specifies the IP address of the primary entry points that are obtaining the stream on Media Services Live."
+    },
+    "backupEntrypoint": {
+      "type": "string",
+      "description": "Specifies the IP address of the backup entry points that are obtaining the stream on Media Services Live."
+    },
+    "playbackSettings": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/PlaybackSetting.json"
+    },
+    "status": {
+      "type": "string",
+      "description": "The status of the stream: `Provisioned` or `Not Yet Provisioned`."
+    },
+    "email": {
+      "type": "string",
+      "description": "The email that you send to notify the customer that the stream is successfully provisioned."
+    },
+    "blocked": {
+      "type": "boolean",
+      "description": "Specify whether the stream is blocked or unblocked."
+    },
+    "cpcode": {
+      "type": "integer",
+      "description": "The Content Provider code associated with the stream."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of your stream. The stream name can be up to 100 characters long and can only include alphanumeric and underscore characters."
+    },
+    "dynamic": {
+      "type": "boolean",
+      "description": "Specify whether to identify if the stream is capable of publishing multi bitrate streams."
+    },
+    "encoder": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/Encoder.json"
+    },
+    "streamEndDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time when the stream usage must end."
+    },
+    "contactDetails": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/ContactDetails.json#"
+    },
+    "authProfiles": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/RTMPAuthInfo.json#"
+    }
+  }
+}

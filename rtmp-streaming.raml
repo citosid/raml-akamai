@@ -1,0 +1,209 @@
+#%RAML 0.8
+title: RTMP streaming
+version: "1"
+baseUri: /config-media-live/v1/live/rtmp/
+schemas:
+ - getRTMPConfigurationsListSchema: !include ./schemas/getRTMPConfigurationsListDTO.json
+ - postRTMPConfigurationSchema: !include ./schemas/postRTMPConfigurationDTO.json
+ - getRTMPConfigurationSchema: !include ./schemas/getRTMPConfigurationDTO.json
+ - putRTMPConfigurationSchema: !include ./schemas/putRTMPConfigurationDTO.json
+ - RTMPCpcodesSchema: !include ./schemas/RTMPCpcodesDTO.json
+ - RTMPContactsSchema: !include ./schemas/RTMPContactsDTO.json
+ - RTMPStorageGroupSchema: !include ./schemas/RTMPStorageGroupDTO.json
+ - getRTMPStreamsListSchema: !include ./schemas/getRTMPStreamsListDTO.json
+ - getRTMPStreamSchema: !include ./schemas/getRTMPStreamDTO.json
+ - postRTMPStreamSchema: !include ./schemas/postRTMPStreamDTO.json
+ - putRTMPStreamSchema: !include ./schemas/putRTMPStreamDTO.json
+
+/configuration:
+  displayName: Configuration resource
+  description: |
+    Contains details about the RTMP configuration such
+    as its name, hostname, CP code, and authorization profiles.
+  get:
+    description: |
+      List configurations: Retrieves a set of all RTMP configurations
+      available to you.
+    responses:
+      200:
+        description: Successful Response
+        body:
+          application/json:
+            schema: getRTMPConfigurationsListSchema
+            example: !include ./examples/RTMP-Flash-config-list.json
+  post:
+    description: |
+      Create a configuration:
+      Provisions a new RTMP configuration.
+    body:
+      application/json:
+        schema: postRTMPConfigurationSchema
+        example: !include ./examples/RTMP-Flash-config-create.json
+    responses:
+      201:
+        description: Successful Response
+        headers:
+          Location:
+            description: The relative URL for the create configuration endpoint.
+            type: string
+            example: /configuration/123
+  /{cpcode}:
+    displayName: A specific cpcode
+    description: "{cpcode} Resource"
+    uriParameters:
+      cpcode:
+        displayName: cpcode
+        description: Unique identifier for each RTMP configuration.
+        type: integer
+        example: 123456
+        required: true
+        repeat: false
+    get:
+      description: |
+        Get a configuration: Retrieves detailed information
+        about the requested RTMP configuration.
+      responses:
+        200:
+          description: Successful Response
+          body:
+            application/json:
+              schema: getRTMPConfigurationSchema
+              example: !include ./examples/RTMP-Flash-config-details.json
+    delete:
+      description: |
+        Delete a configuration:
+        Deletes an existing RTMP configuration.
+      responses:
+        200:
+          description: Successful Response
+    put:
+      description: |
+        Update a configuration: Updates certain fields of an
+        existing RTMP configuration.
+      body:
+        application/json:
+          schema: putRTMPConfigurationSchema
+          example: !include ./examples/RTMP-Flash-confg-edit.json
+      responses:
+        200:
+          description: Successful Response
+/cpcode:
+  displayName: Cpcode resource
+  description: |
+    Contains the list of used and unused CP codes.
+  get:
+    description: |
+      List RTMP CP codes:
+      Obtains available CP codes for new RTMP configurations.
+    responses:
+      200:
+        description: Successful Response
+        body:
+          application/json:
+            schema: RTMPCpcodesSchema
+            example: !include ./examples/RTMP-Cpcodes.json
+/contacts:
+  displayName: Contacts resource
+  description: |
+    Contains list of people in your organization to
+    contact regarding entry point availability issues.
+  get:
+    description: |
+      List RTMP contacts: Obtains a list of people in your organization
+      to contact regarding entry point availability issues.
+    responses:
+      200:
+        description: Successful Response
+        body:
+          application/json:
+            schema: RTMPContactsSchema
+            example: !include ./examples/RTMP-Contacts.json
+/stream:
+  displayName: Stream resource
+  description: |
+    Contains details about the RTMP stream such as its name,
+    entry points, encoder, CP code, and authorization profiles.
+  get:
+    description: |
+      List RTMP streams: Retrieves a list of all RTMP streams available
+      to a user.
+    responses:
+      200:
+        description: Successful Response
+        body:
+          application/json:
+            schema: getRTMPStreamsListSchema
+            example: !include ./examples/RTMP-Stream-list.json
+  post:
+    description: |
+      Create an RTMP stream:
+      Provisions a new RTMP stream.
+    body:
+      application/json:
+        schema: postRTMPStreamSchema
+        example: !include ./examples/RTMP-Stream-create.json
+    responses:
+      202:
+        description: Successful Response
+        headers:
+          Location:
+            description: The relative URL for the create stream endpoint.
+            type: string
+            example: /stream/123
+  /{streamId}:
+    displayName: A specific streamId
+    description: "{streamId} Resource"
+    uriParameters:
+      streamId:
+        displayName: streamId
+        description: Unique identifier for each stream.
+        example: 12345
+        type: integer
+        required: true
+        repeat: false
+    get:
+      description: |
+        Get an RTMP stream: Retrieves detailed information about the
+        requested RTMP stream.
+      responses:
+        200:
+          description: Successful Response
+          body:
+            application/json:
+              schema: getRTMPStreamSchema
+              example: !include ./examples/RTMP-Stream-details.json
+    delete:
+      description: |
+        Delete an RTMP stream:
+        Deletes the specified RTMP stream.
+      responses:
+        200:
+          description: Successful Response
+
+    put:
+      description: |
+        Update an RTMP stream:
+        Modifies the specified RTMP stream.
+      body:
+        application/json:
+          schema: putRTMPStreamSchema
+          example: !include ./examples/RTMP-Stream-edit.json
+      responses:
+        200:
+          description: Successful Response
+/storage-group:
+  displayName: Storage-group resource
+  description: |
+    Contains a list of storage groups. You can keep your
+    content for distribution in a storage group.
+  get:
+    description: |
+      List storage groups:
+      Provides a list of storage groups.
+    responses:
+      200:
+        description: Successful Response
+        body:
+          application/json:
+            schema: RTMPStorageGroupSchema
+            example: !include ./examples/RTMP-storage-group.json

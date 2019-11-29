@@ -1,0 +1,79 @@
+#%RAML 0.8
+title: Streams
+version: 1
+baseUri: /config-media-live/v1
+mediaType: application/json
+
+/live/{domain}/stream:
+  displayName: streams
+  uriParameters:
+    domain:
+      description: |
+        Unique identifier for each domain.
+      type: string
+      required: true
+      example: domain.com
+  get:
+    description: |
+      List streams: List all the streams associated with the profile.
+      Streams may be based on either a Stream Packaging configuration
+      or HLS, HDS, and DASH ingest configuration.  See the
+      [Stream](#streamxml) object for details on each type.
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/list-streams-200.xml
+  post:
+    description: |
+      Create a new stream: Create a new stream, either based on a
+      Stream Packaging configuration or an HLS, HDS, and DASH
+      configuration.  See the [Stream](#streamxml) object for details on
+      each type.
+    body:
+      application/xml:
+        example: !include examples/create-a-new-stream.xml
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include examples/create-a-new-stream-200.xml
+  /{streamId}:
+    displayName: stream
+    uriParameters:
+      streamId:
+        description: |
+          Unique identifier for each stream.
+        type: number
+        required: true
+        example: 10000
+    get:
+      description: |
+        Get a stream: Get the stream's details.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/get-a-stream-200.xml
+    put:
+      description: |
+        Modify a stream: Edit an existing stream, based on either a
+        Stream Packaging configuration or HLS, HDS, and DASH ingest
+        configuration.  See the [Stream](#streamxml) object for details
+        on each type.
+      body:
+        application/xml:
+          example: !include examples/modify-a-stream.xml
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/modify-a-stream-200.xml
+    delete:
+      description: |
+        Remove a stream: Delete a stream.
+      responses:
+        200:
+          body:
+            application/xml:
+              example: !include examples/remove-a-stream-200.xml

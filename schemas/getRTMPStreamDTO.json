@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/getRTMPStreamDTO.json#",
+  "type": "object",
+  "description": "Creates a new RTMP stream.",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "readOnly": true,
+      "description": "A unique ID for your stream."
+    },
+    "isSecure": {
+      "type": "boolean",
+      "description": "Specify whether secure profiles are enabled on the stream."
+    },
+    "createdDate": {
+      "type": "string",
+      "readOnly": true,
+      "format": "date-time",
+      "description": "The date and time when your stream is created. It's an ISO 8601 timestamp."
+    },
+    "primaryEntrypoint": {
+      "type": "string",
+      "description": "Specifies the URL of the primary entry point that obtain the stream in Media Services Live."
+    },
+    "backupEntrypoint": {
+      "type": "string",
+      "description": "Specifies the RTMP URL of the backup entry point that obtain the stream in Media Services Live. You can use the backup entry point when the primary entry point fails."
+    },
+    "playbackSettings": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/PlaybackSetting.json"
+    },
+    "status": {
+      "type": "string",
+      "description": "The status of the stream: Provisioned or Not Yet Provisioned."
+    },
+    "email": {
+      "type": "string",
+      "description": "The email address to notify that the stream is successfully provisioned."
+    },
+    "blocked": {
+      "type": "boolean",
+      "description": "Specify whether the stream is blocked or unblocked. Enable blocked to prevent end users from accessing the stream."
+    },
+    "cpcode": {
+      "type": "integer",
+      "description": "The Content Provider code that you assign to the stream."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of your stream. The stream name can be up to 100 characters long and can only include alphanumeric and underscore characters."
+    },
+    "dynamic": {
+      "type": "boolean",
+      "description": "Specifies if the stream can publish multiple bitrate streams."
+    },
+    "encoder": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/Encoder.json"
+    },
+    "streamEndDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time at which you expect your streaming event to end. It's an ISO 8601 timestamp."
+    },
+    "contactDetails": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/ContactDetails.json#"
+    },
+    "authProfiles": {
+      "$ref": "resource:/descriptors/config-media-live/v1/schemas/RTMPAuthInfo.json#"
+    }
+  },
+  "required": [
+    "authProfiles",
+    "contactDetails",
+    "cpcode",
+    "dynamic",
+    "email",
+    "encoder",
+    "name",
+    "streamEndDate"
+  ]
+}

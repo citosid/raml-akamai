@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-04-schema#",
+  "id": "resource:/descriptors/config-media-live/v1/schemas/RTMPAuthInfo.json#",
+  "type": "array",
+  "description": "Authorization profiles that can access the configuration or the stream.",
+  "items": {
+    "type": "object",
+    "description": "Authorization profiles that can access the configuration or the stream.",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The unique name provided to the authorization profile, not more than 30 characters. If the auth profile names are duplicated then you can't edit the profiles."
+      },
+      "password": {
+        "type": "string",
+        "description": "Password for each auth profile. Passwords can be made up of any character type, but must be no more than 10 characters."
+      },
+      "eTokenType": {
+        "type": "string",
+        "description": "Specifies whether to create a new E-Token (`NEW`), keep the same E-Token (`NO_CHANGE`), or disable (`DISABLE`) an existing E-token. Enabling E-type token requires inclusion of a Rijndael key in your token. For details about E-tokens, see the [Secure Streaming Integration Guide](https://control.akamai.com/dl/customers/LIVE/SecureStreamingIntegrationGuide.pdf).",
+        "enum": [
+          "NEW",
+          "NO_CHANGE",
+          "DISABLE"
+        ]
+      },
+      "requireIP": {
+        "type": "boolean",
+        "description": "Specify whether the authorization profile includes IP addresses in all tokens."
+      },
+      "requirePath": {
+        "type": "boolean",
+        "description": "The path value in the token ties the token to a particular stream or piece of content. By removing the path from the token will reduce the security of the token."
+      },
+      "requirePayload": {
+        "type": "boolean",
+        "description": "Enabling this value will reject any token that does not include a payload field."
+      },
+      "cidr": {
+        "type": "string",
+        "description": "This option can be used if you would like to restrict viewing of a stream to end users in a certain IP range or CIDR block."
+      }
+    },
+    "required": [
+      "cidr",
+      "eTokenType",
+      "name",
+      "password",
+      "requireIP",
+      "requirePath",
+      "requirePayload"
+    ]
+  }
+}
